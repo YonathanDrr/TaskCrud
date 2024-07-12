@@ -1,0 +1,21 @@
+﻿@media screen and (min-width: 768px) {	
+	#ModalCreateUpdate_xl .modal-dialog  {width:1500px;}
+}
+
+@media screen and (min-width: 768px) {	
+	#ModalConfirmaBH_XL .modal-dialog  {
+    width:1280px;
+	}
+}
+
+.modal-dialog.modal-1500 {
+    width: 1500px;
+    margin: 30px auto;
+}
+
+
+/*.bigModal{
+    width:1280px;
+    margin-left:-300px;
+    margin-right:-500px;
+}*/

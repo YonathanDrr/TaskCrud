@@ -1,0 +1,194 @@
+#fade_page_in {
+    animation: fadein 1s;
+    -moz-animation: fadein 02s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+
+#fade_page_in2 {
+    animation: fadein 3s;
+    -moz-animation: fadein 02s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+
+
+#fade_page_in3 {
+    animation: fadein 4s;
+    -moz-animation: fadein 04s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
+}
+.reduce_fontsize{
+    font-size:9px;
+}
+
+.ancho_columna {
+ width:100px;
+}
+
+
+.ancho_columna_10 {
+    width: 10px;
+}
+
+
+.ancho_columna_50 {
+    width: 50px;
+}
+
+.ancho_columna_70 {
+    width: 70px;
+}
+
+.ancho_columna_2 {
+    width: 120px;
+}
+
+
+.ancho_columna_100 {
+    width: 100px;
+}
+
+.ancho_columna_150 {
+    width: 150px;
+}
+
+.ancho_columna_200 {
+    width: 200px;
+}
+
+
+.ancho_columna_225 {
+    width: 225px;
+}
+
+
+.ancho_columna_250 {
+    width: 250px;
+}
+
+.ancho_columna_350 {
+    width: 350px;
+}
+
+.ancho_columna_450 {
+    width: 450px;
+}
+
+.ancho_columna_650 {
+    width: 650px;
+}
+
+
+.ancho_columna_750 {
+    width: 750px;
+}
+
+.ancho_columna_850 {
+    width: 850px;
+}
+
+
+@media screen and (max-width: 700px) {
+    #div_filtro_botones {
+        justify-content: center;
+    }
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        /*-ms-transform: translate(500px, 1000px);
+    -ms-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5,0.5);
+    transform: scale(0.5, 0.5);*/
+    }
+
+    to {
+        opacity: 1;
+        /*-ms-transform: translate(100px, 150px);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1,1);
+    transform: scale(1, 1);*/
+    }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*INNFORMACIONES*/
+
+.toast-info {
+    color: #FFFFFF;
+    padding: 15px 15px 15px 15px !important; /*Corrects Spacing for default icon*/
+    padding-left: 40px !important;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+
+.toast-error {
+    color: #FFFFFF;
+    padding: 15px 15px 15px 15px !important; /*Corrects Spacing for default icon*/
+    padding-left: 40px !important;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.toast-warning {
+    color: #FFFFFF;
+    padding: 15px 15px 15px 15px !important; /*Corrects Spacing for default icon*/
+    padding-left: 40px !important;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+
+.toast-success {
+    color: #FFFFFF;
+    padding: 15px 15px 15px 15px !important; /*Corrects Spacing for default icon*/
+    padding-left: 40px !important;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+
+.color_icon_red {
+    color:red;
+}
+
+.color_icon_cornflowerblue {
+    color: cornflowerblue;
+}
+
+@media print {
+    .export-table {
+        overflow: visible !important;
+    }
+}

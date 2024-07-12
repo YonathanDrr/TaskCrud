@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script src="~/js/main.js"></script>
+
+
+
+
+<div class="border" style="margin-bottom:5px;padding:15px;margin-top:5px;margin-bottom:20px;background-color:white">
+
+
+    <h2>Task</h2>
+
+    <div class="row">
+        <div class="col-md-3">
+
+            <button class="btn btn-primary" onclick=" modal_ingresa_tarea()"><i class="fa fa-check" aria-hidden="true"></i> Agregar</button>
+
+
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<div class="border" style="margin-bottom:5px;padding:15px;margin-top:5px;margin-bottom:20px;background-color:white">
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <table id="tablaTask" class="table table-sm table-bordered table-striped table-hover tableFormat" style="width:100%;">
+                <thead>
+                    <tr>
+
+                        <th>
+                            Título
+                        </th>
+                        <th>
+                            Descripción
+                        </th>
+                        <th>
+                            Completada
+                        </th>
+                        <th>
+                            Opciones
+                        </th>
+
+                    </tr>
+                </thead>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="modal_ingresar_editar" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="border-radius:5px;">
+            <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLabel"> <label id="label_ingresar_editar"></label></h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:cornflowerblue">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="container">
+
+                                <div class="border ">
+
+                                    <input  hidden id="id_tarea" />
+
+                                    <div class="row">
+
+
+                                        <div class="col-md-3">
+
+                                            <label for="input_titulo" class="grey-text">Título</label>
+                                            <input type="text" id="input_titulo" class="form-control grey-text">
+                                            <div id="v_input_titulo"></div>
+
+                                        </div>
+
+                                        <div class="col-md-3">
+
+                                            <label for="input_descripcion" class="grey-text">Descripción</label>
+                                            <input type="text" id="input_descripcion" class="form-control grey-text">
+                                            <div id="v_input_descripcion"></div>
+
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <label for="select_IsCompleted" class="grey-text">Tarea Completada</label>
+
+                                            <select id="select_IsCompleted" class="form-control grey-text" >
+                                                <option value="0" selected>No</option>
+                                                <option value="1" >SI</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+
+                                <br />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button class="btn btn-primary" id="btn_ingresa" onclick=" ingresar_tarea()"><i class="fa fa-check" aria-hidden="true" style="color:darkgreen"></i> Aceptar</button>
+                <button class="btn btn-primary" id="btn_actualizar" onclick=" actualizar_tarea()"><i class="fa fa-check" aria-hidden="true" style="color:darkgreen"></i> Actualizar</button>
+                <button class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times-circle" aria-hidden="true" style="color:red"></i> Cancelar</button>
+
+            </div>r
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="modal_eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="border-radius:5px;">
+            <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLabel">Eliminar </h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:cornflowerblue">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+
+            <input id="id_eliminar"   hidden />      
+            <div class="modal-body grey-text text-center">
+                <form>
+                    ¿ Está seguro de eliminar esta información ? <br />
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button class="btn btn-primary" onclick="eliminar_tarea()"><i class="fa fa-check" aria-hidden="true" style="color:darkgreen"></i> Aceptar</button>
+                <button class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times-circle" aria-hidden="true" style="color:red"></i> Cancelar</button>
+
+            </div>
+        </div>
+    </div>
+</div>

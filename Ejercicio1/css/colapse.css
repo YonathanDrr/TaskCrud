@@ -1,0 +1,28 @@
+﻿@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+
+
+.card > a::before(2) {
+    margin-top:20px;
+    margin-right:20px;
+    vertical-align:middle;
+    float: right !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 5px;
+    color:white;
+}
+
+
+.card > a.collapsed::before(2) {
+    float: right !important;
+    content:"\f067";
+    color:white;
+    vertical-align:middle;
+}
+
+.card > a:hover, 
+.card > a:active, 
+.card > a:focus  {
+    text-decoration:none;
+}
